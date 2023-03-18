@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Backend2",
+    "\\Backend2\\Models"
   ],
+  "SelectedNode": "\\NUnit Tests",
   "PreviewInSolutionExplorer": false
 }
