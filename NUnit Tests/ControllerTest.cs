@@ -53,7 +53,7 @@ namespace Backend2.Tests
             // Assert
             Assert.IsNotNull(result);
             Assert.IsInstanceOf<IEnumerable<Member>>(result);
-            Assert.AreEqual(3, result.Count());
+            Assert.That(3, result.Count());
         }
 
         [Test]
@@ -72,7 +72,7 @@ namespace Backend2.Tests
             // Verifies that the new member is added to the in-memory database.
             var savedMember = _dbContext.Member.Find(result.id);
             Assert.IsNotNull(savedMember);
-            Assert.AreEqual(member.mname, savedMember.mname);
+            Assert.That(member.mname, savedMember.mname);
         }
 
         [Test]
@@ -90,12 +90,12 @@ namespace Backend2.Tests
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.AreEqual(updatedMember.mname, result.mname);
+            Assert.That(updatedMember.mname, result.mname);
 
             // Verifies that the existing member is updated in the in-memory database.
             var savedMember = _dbContext.Member.Find(result.id);
             Assert.IsNotNull(savedMember);
-            Assert.AreEqual(updatedMember.mname, savedMember.mname);
+            Assert.That(updatedMember.mname, savedMember.mname);
         }
 
         [Test]
